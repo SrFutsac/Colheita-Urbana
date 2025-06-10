@@ -22,14 +22,14 @@ O aplicativo oferece as seguintes funcionalidades:
 -   **Utilização de Estruturas de Dados (`list`, `dict`):** Uma lista (`self.produtos`) é usada para armazenar os objetos da classe `Produto`. Dicionários são utilizados para salvar os dados dos produtos no arquivo JSON.
 -   **Tratamento de Erros (`try-except`):** Implementado para lidar com possíveis erros de entrada do usuário (por exemplo, ao converter preços para números) e ao carregar/salvar dados no arquivo JSON. A classe `Produto` também possui tratamento de erros na sua inicialização para garantir a validade dos dados.
 -   **Práticas Básicas de Programação Orientada a Objetos:**
-    -   **Criação de Classe (`Produto`, `ConectaSupermercadoApp`):** O projeto utiliza duas classes para modelar as entidades principais do sistema: `Produto` (com atributos como nome, preços, data de validade e métodos para calcular desconto e verificar proximidade do vencimento) e `ConectaSupermercadoApp` (que gerencia a lista de produtos e as operações principais do aplicativo).
+    -   **Criação de Classe (`Produto`, `ColheitaUrbanaApp`):** O projeto utiliza duas classes para modelar as entidades principais do sistema: `Produto` (com atributos como nome, preços, data de validade e métodos para calcular desconto e verificar proximidade do vencimento) e `ColheitaUrbanaApp` (que gerencia a lista de produtos e as operações principais do aplicativo).
     -   **Atributos:** As classes possuem atributos para armazenar os dados relevantes (por exemplo, `self.nome`, `self.preco_original` na classe `Produto`).
-    -   **Métodos:** As classes contêm métodos que definem o comportamento dos objetos (por exemplo, `calcular_desconto_percentual`, `esta_proximo_vencimento` na classe `Produto`, e `adicionar_produto`, `listar_produtos` na classe `ConectaSupermercadoApp`).
+    -   **Métodos:** As classes contêm métodos que definem o comportamento dos objetos (por exemplo, `calcular_desconto_percentual`, `esta_proximo_vencimento` na classe `Produto`, e `adicionar_produto`, `listar_produtos` na classe `ColheitaUrbanaApp`).
 
 ## Como Testar
 
-1.  **Salve o código:** Salve o código Python fornecido em um arquivo chamado `conecta_supermercado.py`.
-2.  **Execute o aplicativo:** Abra um terminal ou prompt de comando, navegue até o diretório onde você salvou o arquivo e execute o comando `python conecta_supermercado.py`.
+1.  **Salve o código:** Salve o código Python fornecido em um arquivo chamado `Colheita_Urbana.py`.
+2.  **Execute o aplicativo:** Abra um terminal ou prompt de comando, navegue até o diretório onde você salvou o arquivo e execute o comando `python Colheita_Urbana.py`.
 3.  **Siga o menu:** O aplicativo apresentará um menu com várias opções. Siga as instruções para interagir com o aplicativo:
     -   **Adicionar Produto com Desconto (1):** Digite as informações do produto quando solicitado (nome, preço original, preço com desconto, data de validade no formato AAAA-MM-DD e quantidade).
     -   **Listar Produtos com Desconto (2):** Visualize todos os produtos cadastrados.
