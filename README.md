@@ -18,7 +18,7 @@ O aplicativo oferece as seguintes funcionalidades:
 
 -   **Uso de Condicionais (`if`, `else`, `elif`):** Utilizados para controlar o fluxo do programa, como na escolha de opções do menu e na verificação de condições (por exemplo, se há produtos na lista).
 -   **Uso de Laços de Repetição (`while`, `for`):** O laço `while` mantém o menu principal em execução até que o usuário escolha sair. O laço `for` é usado para iterar sobre a lista de produtos ao listar e filtrar.
--   **Uso de Funções:** O código é organizado em funções (métodos dentro da classe `ConectaSupermercadoApp`) para realizar tarefas específicas, como `adicionar_produto`, `listar_produtos`, `filtrar_produtos_por_preco`, etc., promovendo a reutilização e organização do código.
+-   **Uso de Funções:** O código é organizado em funções (métodos dentro da classe `ColheitaUrbanaApp`) para realizar tarefas específicas, como `adicionar_produto`, `listar_produtos`, `filtrar_produtos_por_preco`, etc., promovendo a reutilização e organização do código.
 -   **Utilização de Estruturas de Dados (`list`, `dict`):** Uma lista (`self.produtos`) é usada para armazenar os objetos da classe `Produto`. Dicionários são utilizados para salvar os dados dos produtos no arquivo JSON.
 -   **Tratamento de Erros (`try-except`):** Implementado para lidar com possíveis erros de entrada do usuário (por exemplo, ao converter preços para números) e ao carregar/salvar dados no arquivo JSON. A classe `Produto` também possui tratamento de erros na sua inicialização para garantir a validade dos dados.
 -   **Práticas Básicas de Programação Orientada a Objetos:**
