@@ -2,7 +2,7 @@ import json
 import datetime
 
 class Produto:
-    """Representa um produto com desconto no supermercado."""
+    #Representa um produto com desconto no supermercado
     def __init__(self, nome, preco_original, preco_desconto, data_validade, quantidade):
         self.nome = nome
         try:
@@ -16,13 +16,13 @@ class Produto:
             raise ValueError(f"Erro ao criar produto: {e}")
 
     def calcular_desconto_percentual(self):
-        """Calcula o percentual de desconto do produto."""
+        #Calcula o percentual de desconto do produto
         if self.preco_original > 0:
             return ((self.preco_original - self.preco_desconto) / self.preco_original) * 100
         return 0
 
     def esta_proximo_vencimento(self, dias=7):
-        """Verifica se o produto está próximo da data de validade."""
+        #Verifica se o produto está próximo da data de validade
         hoje = datetime.date.today()
         diferenca = (self.data_validade - hoje).days
         return 0 <= diferenca <= dias
@@ -36,7 +36,7 @@ class ColheitaUrbanaApp:
         self.produtos = self.carregar_produtos()
 
     def carregar_produtos(self):
-        """Carrega os produtos com desconto do arquivo JSON."""
+        #Carrega os produtos com desconto do arquivo JSON.
         try:
             with open(self.data_file, 'r') as f:
                 data = json.load(f)
@@ -55,7 +55,7 @@ class ColheitaUrbanaApp:
             return []
 
     def salvar_produtos(self):
-        """Salva os produtos com desconto no arquivo JSON."""
+        #Salva os produtos com desconto no arquivo JSON
         data_list = []
         for produto in self.produtos:
             data_list.append({
@@ -72,7 +72,7 @@ class ColheitaUrbanaApp:
             print("Erro ao salvar os produtos.")
 
     def adicionar_produto(self):
-        """Adiciona um novo produto com desconto."""
+        #Adiciona um novo produto com desconto
         nome = input("Nome do produto: ")
         preco_original_str = input("Preço original: ")
         data_validade_str = input("Data de validade (AAAA-MM-DD): ")
@@ -108,7 +108,7 @@ class ColheitaUrbanaApp:
                 print("Opção inválida. Escolha 'P' para percentual ou 'V' para valor fixo.")
 
     def listar_produtos(self):
-        """Lista todos os produtos com desconto disponíveis."""
+        #Lista todos os produtos com desconto disponíveis
         if self.produtos:
             print("\n--- Produtos com Desconto ---")
             for i, produto in enumerate(self.produtos):
@@ -118,7 +118,7 @@ class ColheitaUrbanaApp:
             print("Nenhum produto com desconto disponível no momento.")
 
     def filtrar_produtos_por_preco(self, preco_maximo):
-        """Filtra produtos com preço de desconto abaixo de um valor máximo."""
+        "Filtra produtos com preço de desconto abaixo de um valor máximo."
         produtos_filtrados = [produto for produto in self.produtos if produto.preco_desconto <= preco_maximo]
         if produtos_filtrados:
             print(f"\n--- Produtos com preço até R${preco_maximo:.2f} ---")
@@ -129,7 +129,7 @@ class ColheitaUrbanaApp:
             print(f"Nenhum produto encontrado com preço até R${preco_maximo:.2f}.")
 
     def listar_produtos_proximos_vencimento(self, dias=7):
-        """Lista os produtos que estão próximos da data de validade."""
+        #Lista os produtos que estão próximos da data de validade
         produtos_proximos = [produto for produto in self.produtos if produto.esta_proximo_vencimento(dias)]
         if produtos_proximos:
             print(f"\n--- Produtos Próximos ao Vencimento (até {dias} dias) ---")
